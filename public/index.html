@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GSSTACK — Sistemas &amp; Sites</title>
+  <meta name="description" content="GSSTACK cria sistemas web, sites e integrações com foco em performance e experiência premium." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute;overflow:hidden;">
+    <defs>
+      <linearGradient id="neonTrailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#C026D3" />
+        <stop offset="100%" stop-color="#F000B8" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  
+  <nav data-node-id="n1" data-component="navbar" style="position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 80px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,15,0.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(192,38,211,0.12);">
+    <a data-node-id="n2" href="#" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+      <div data-node-id="n3" style="width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,#F000B8,#7C3AED);display:flex;align-items:center;justify-content:center;">
+        <span data-node-id="n4" style="font-weight:900;font-size:14px;color:#fff;letter-spacing:-0.05em;">GS</span>
+      </div>
+      <span data-node-id="n5" style="font-size:1.125rem;font-weight:800;letter-spacing:-0.02em;color:#F1F5F9;">GSSTACK</span>
+    </a>
+    <div data-node-id="n6" style="display:flex;align-items:center;gap:36px;">
+      <a data-node-id="n7" href="#servicos" class="nav-link">Serviços</a>
+      <a data-node-id="n8" href="#projetos" class="nav-link">Projetos</a>
+      <a data-node-id="n9" href="#sobre" class="nav-link">Sobre</a>
+      <a data-node-id="n10" href="#contato" class="nav-link">Contato</a>
+    </div>
+    <a data-node-id="n11" href="#contato" class="glow-btn" style="padding:10px 24px;border-radius:var(--radius-md);font-weight:700;font-size:0.875rem;text-decoration:none;color:#fff;letter-spacing:0.02em;">Fale Conosco</a>
+  </nav>
+
+  
+  <section data-node-id="n12" data-role="hero" class="hero-section" style="position:relative;display:flex;align-items:center;overflow:hidden;padding:0 80px;">
+    <div data-node-id="n13" class="noise-overlay"></div>
+    <div data-node-id="n14" class="scanline"></div>
+
+    
+    <div class="hero-grid-3d" aria-hidden="true">
+      <div class="grid-plane" id="heroGridPlane"></div>
+    </div>
+    <canvas id="heroParticles" class="hero-particles" aria-hidden="true"></canvas>
+
+    
+    <div data-node-id="n15" style="position:absolute;inset:0;z-index:0;">
+      <div data-node-id="n17" style="position:absolute;inset:0;background:linear-gradient(to right, rgba(10,10,15,0.97) 40%, rgba(10,10,15,0.55) 100%);"></div>
+    </div>
+
+    
+    <div data-node-id="n18" class="hero-parallax" id="heroParallaxText" style="position:relative;z-index:2;max-width:800px;">
+      <div data-node-id="n19" class="tag-pill" style="margin-bottom:32px;">
+        <span data-node-id="n20" style="width:6px;height:6px;border-radius:50%;background:#F000B8;display:inline-block;"></span>
+        Desenvolvimento Digital Premium
+      </div>
+
+      <h1 data-node-id="n21" style="font-size:clamp(52px,6vw,96px);font-weight:900;line-height:0.95;letter-spacing:-0.03em;margin-bottom:24px;">
+        <span data-node-id="n22" style="color:#F1F5F9;display:block;">Construímos</span>
+        <span data-node-id="n23" class="gradient-text" style="display:block;">Sistemas &amp;</span>
+        <span data-node-id="n24" style="color:#F1F5F9;display:block;">Sites que</span>
+        <span data-node-id="n25" class="gradient-text-alt" style="display:block;">Impactam.</span>
+      </h1>
+
+      <p data-node-id="n26" style="font-size:1.125rem;line-height:1.75;color:rgba(241,245,249,0.6);max-width:520px;margin-bottom:44px;">
+        Da ideia ao produto final — criamos soluções digitais sob medida que transformam a visão do seu negócio em realidade com tecnologia de ponta.
+      </p>
+
+      <div data-node-id="n27" style="display:flex;gap:16px;align-items:center;">
+        <a data-node-id="n28" href="#projetos" class="glow-btn" style="padding:14px 36px;border-radius:var(--radius-md);font-weight:700;font-size:1rem;text-decoration:none;color:#fff;letter-spacing:0.02em;">Ver Projetos</a>
+        <a data-node-id="n29" href="#servicos" class="glow-btn-outline" style="padding:14px 36px;border-radius:var(--radius-md);font-weight:600;font-size:1rem;text-decoration:none;">Nossos Serviços</a>
+      </div>
+    </div>
+
+    
+    <div data-node-id="n30" style="position:absolute;right:80px;bottom:80px;z-index:2;display:flex;flex-direction:column;gap:16px;align-items:flex-end;">
+      <div data-node-id="n31" class="card-neon" style="padding:20px 28px;text-align:right;">
+        <div data-node-id="n32" style="font-size:2.5rem;font-weight:900;line-height:1;" class="gradient-text">50+</div>
+        <div data-node-id="n33" style="font-size:0.75rem;color:rgba(241,245,249,0.5);letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;">Projetos Entregues</div>
+      </div>
+      <div data-node-id="n34" class="card-neon" style="padding:20px 28px;text-align:right;">
+        <div data-node-id="n35" style="font-size:2.5rem;font-weight:900;line-height:1;" class="gradient-text">100%</div>
+        <div data-node-id="n36" style="font-size:0.75rem;color:rgba(241,245,249,0.5);letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;">Satisfação dos Clientes</div>
+      </div>
+      <div data-node-id="n37" class="card-neon" style="padding:20px 28px;text-align:right;">
+        <div data-node-id="n38" style="font-size:2.5rem;font-weight:900;line-height:1;" class="gradient-text">24h</div>
+        <div data-node-id="n39" style="font-size:0.75rem;color:rgba(241,245,249,0.5);letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;">Suporte Disponível</div>
+      </div>
+    </div>
+
+    
+    <div data-node-id="n40" style="position:absolute;bottom:40px;left:80px;z-index:2;display:flex;align-items:center;gap:12px;">
+      <div data-node-id="n41" style="width:1px;height:48px;background:linear-gradient(to bottom, transparent, #C026D3);"></div>
+      <span data-node-id="n42" style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(241,245,249,0.35);">Scroll para explorar</span>
+    </div>
+  </section>
+
+  <div data-node-id="n43" class="section-divider"></div>
+
+  
+  <section data-node-id="n44" id="servicos" data-role="services" style="padding:100px 80px;position:relative;overflow:hidden;">
+    <div data-node-id="n45" style="position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle, rgba(192,38,211,0.12) 0%, transparent 70%);pointer-events:none;"></div>
+
+    
+    <div data-node-id="n46" style="text-align:center;margin-bottom:72px;">
+      <div data-node-id="n47" class="tag-pill" style="margin-bottom:20px;display:inline-flex;">
+        <span data-node-id="n48" style="width:6px;height:6px;border-radius:50%;background:#F000B8;display:inline-block;"></span>
+        O que fazemos
+      </div>
+      <h2 data-node-id="n49" style="font-size:clamp(36px,4vw,64px);font-weight:900;letter-spacing:-0.03em;line-height:1;margin-bottom:20px;">
+        <span data-node-id="n50" style="color:#F1F5F9;">Soluções Digitais</span><br />
+        <span data-node-id="n51" class="gradient-text">de Alta Performance</span>
+      </h2>
+      <p data-node-id="n52" style="color:rgba(241,245,249,0.5);font-size:1rem;max-width:500px;margin:0 auto;line-height:1.7;">
+        Tecnologia sob medida para negócios que querem crescer sem limite.
+      </p>
+    </div>
+
+    
+    <div class="neon-trail-wrap">
+      <svg class="neon-trail-svg" id="servicesTrailSvg" aria-hidden="true">
+        <rect id="servicesTrailRect" x="1" y="1" rx="20" />
+      </svg>
+      <div data-node-id="n53" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;" data-component="services-grid">
+
+      
+      <div data-node-id="n54" class="card-neon reveal" style="padding:36px 28px;position:relative;overflow:hidden;" data-component="service-card">
+        <div data-node-id="n55" style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle, rgba(192,38,211,0.2) 0%, transparent 70%);"></div>
+        <div data-node-id="n56" class="service-icon-wrap" style="width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,rgba(192,38,211,0.2),rgba(124,58,237,0.2));border:1px solid rgba(192,38,211,0.35);display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+          <img data-node-id="n57" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='4'%20height='4'%3E%3Crect%20width='4'%20height='4'%20fill='%23EDE4CC'/%3E%3C/svg%3E" data-asset-id="icon-system" style="width:28px;height:28px;object-fit:contain;" alt="Sistemas" />
+        </div>
+        <h3 data-node-id="n58" style="font-size:1.25rem;font-weight:800;color:#F1F5F9;margin-bottom:12px;letter-spacing:-0.01em;">Sistemas Web</h3>
+        <p data-node-id="n59" style="color:rgba(241,245,249,0.5);font-size:0.875rem;line-height:1.7;">ERPs, CRMs, dashboards e plataformas customizadas para automatizar e escalar seu negócio.</p>
+        <div data-node-id="n60" style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(192,38,211,0.12);">
+          <a data-node-id="n61" href="#" style="font-size:0.8rem;font-weight:600;color:#C026D3;text-decoration:none;letter-spacing:0.03em;display:flex;align-items:center;gap:8px;">
+            Saiba mais
+            <span data-node-id="n62" style="font-size:1rem;">→</span>
+          </a>
+        </div>
+      </div>
+
+      
+      <div data-node-id="n63" class="card-neon reveal" style="padding:36px 28px;position:relative;overflow:hidden;" data-component="service-card">
+        <div data-node-id="n64" style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle, rgba(240,0,184,0.2) 0%, transparent 70%);"></div>
+        <div data-node-id="n65" class="service-icon-wrap" style="width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,rgba(240,0,184,0.2),rgba(192,38,211,0.2));border:1px solid rgba(240,0,184,0.35);display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+          <img data-node-id="n66" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='4'%20height='4'%3E%3Crect%20width='4'%20height='4'%20fill='%23EDE4CC'/%3E%3C/svg%3E" data-asset-id="icon-web" style="width:28px;height:28px;object-fit:contain;" alt="Sites" />
+        </div>
+        <h3 data-node-id="n67" style="font-size:1.25rem;font-weight:800;color:#F1F5F9;margin-bottom:12px;letter-spacing:-0.01em;">Criação de Sites</h3>
+        <p data-node-id="n68" style="color:rgba(241,245,249,0.5);font-size:0.875rem;line-height:1.7;">Landing pages, e-commerces e portais corporativos com design moderno e foco em conversão.</p>
+        <div data-node-id="n69" style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(240,0,184,0.12);">
+          <a data-node-id="n70" href="#" style="font-size:0.8rem;font-weight:600;color:#F000B8;text-decoration:none;letter-spacing:0.03em;display:flex;align-items:center;gap:8px;">
+            Saiba mais
+            <span data-node-id="n71" style="font-size:1rem;">→</span>
+          </a>
+        </div>
+      </div>
+
+      
+      <div data-node-id="n72" class="card-neon reveal" style="padding:36px 28px;position:relative;overflow:hidden;" data-component="service-card">
+        <div data-node-id="n73" style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle, rgba(124,58,237,0.2) 0%, transparent 70%);"></div>
+        <div data-node-id="n74" class="service-icon-wrap" style="width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,rgba(124,58,237,0.2),rgba(192,38,211,0.2));border:1px solid rgba(124,58,237,0.35);display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+          <img data-node-id="n75" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='4'%20height='4'%3E%3Crect%20width='4'%20height='4'%20fill='%23EDE4CC'/%3E%3C/svg%3E" data-asset-id="icon-consult" style="width:28px;height:28px;object-fit:contain;" alt="Consultoria" />
+        </div>
+        <h3 data-node-id="n76" style="font-size:1.25rem;font-weight:800;color:#F1F5F9;margin-bottom:12px;letter-spacing:-0.01em;">Consultoria Tech</h3>
+        <p data-node-id="n77" style="color:rgba(241,245,249,0.5);font-size:0.875rem;line-height:1.7;">Análise de arquitetura, escolha de stack e estratégia digital para acelerar seus resultados.</p>
+        <div data-node-id="n78" style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(124,58,237,0.12);">
+          <a data-node-id="n79" href="#" style="font-size:0.8rem;font-weight:600;color:#7C3AED;text-decoration:none;letter-spacing:0.03em;display:flex;align-items:center;gap:8px;">
+            Saiba mais
+            <span data-node-id="n80" style="font-size:1rem;">→</span>
+          </a>
+        </div>
+      </div>
+
+      
+      <div data-node-id="n81" class="card-neon reveal" style="padding:36px 28px;position:relative;overflow:hidden;" data-component="service-card">
+        <div data-node-id="n82" style="position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle, rgba(192,38,211,0.2) 0%, transparent 70%);"></div>
+        <div data-node-id="n83" class="service-icon-wrap" style="width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,rgba(192,38,211,0.2),rgba(240,0,184,0.2));border:1px solid rgba(192,38,211,0.35);display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+          <img data-node-id="n84" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='4'%20height='4'%3E%3Crect%20width='4'%20height='4'%20fill='%23EDE4CC'/%3E%3C/svg%3E" data-asset-id="icon-api" style="width:28px;height:28px;object-fit:contain;" alt="APIs" />
+        </div>
+        <h3 data-node-id="n85" style="font-size:1.25rem;font-weight:800;color:#F1F5F9;margin-bottom:12px;letter-spacing:-0.01em;">APIs &amp; Integrações</h3>
+        <p data-node-id="n86" style="color:rgba(241,245,249,0.5);font-size:0.875rem;line-height:1.7;">Conectamos seus sistemas com APIs externas, gateways de pagamento, ERPs e muito mais.</p>
+        <div data-node-id="n87" style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(192,38,211,0.12);">
+          <a data-node-id="n88" href="#" style="font-size:0.8rem;font-weight:600;color:#C026D3;text-decoration:none;letter-spacing:0.03em;display:flex;align-items:center;gap:8px;">
+            Saiba mais
+            <span data-node-id="n89" style="font-size:1rem;">→</span>
+          </a>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div data-node-id="n90" class="section-divider"></div>
+
+  
+  <section data-node-id="n91" id="projetos" data-role="featured-project" style="padding:100px 80px;position:relative;overflow:hidden;">
+    <div data-node-id="n92" style="position:absolute;bottom:-200px;left:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle, rgba(240,0,184,0.10) 0%, transparent 70%);pointer-events:none;"></div>
+
+    <div data-node-id="n93" style="text-align:center;margin-bottom:72px;">
+      <div data-node-id="n94" class="tag-pill" style="margin-bottom:20px;display:inline-flex;">
+        <span data-node-id="n95" style="width:6px;height:6px;border-radius:50%;background:#F000B8;display:inline-block;"></span>
+        Projeto em Destaque
+      </div>
+      <h2 data-node-id="n96" style="font-size:clamp(36px,4vw,64px);font-weight:900;letter-spacing:-0.03em;line-height:1;margin-bottom:20px;">
+        <span data-node-id="n97" style="color:#F1F5F9;">Conheça o</span> <span data-node-id="n98" class="gradient-text">StockSys</span>
+      </h2>
+      <p data-node-id="n99" style="color:rgba(241,245,249,0.5);font-size:1rem;max-width:520px;margin:0 auto;line-height:1.7;">
+        Nosso sistema de controle de estoque inteligente — criado para pequenas e médias empresas que precisam de precisão e velocidade.
+      </p>
+    </div>
+
+    
+    <div data-node-id="n100" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+
+      
+      <div data-node-id="n101" class="stocksys-mockup-wrap" style="position:relative;">
+        <div class="stocksys-mockup" id="stocksysMockup">
+          <div data-node-id="n102" style="border-radius:20px;overflow:hidden;position:relative;border:1px solid rgba(192,38,211,0.3);box-shadow:0 0 60px rgba(192,38,211,0.2), 0 8px 32px rgba(0,0,0,0.8);background:var(--color-surface2);">
+            <img data-node-id="n103" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='4'%20height='4'%3E%3Crect%20width='4'%20height='4'%20fill='%23EDE4CC'/%3E%3C/svg%3E" data-asset-id="stocksys-screen" alt="StockSys Dashboard" style="width:100%;height:380px;object-fit:cover;display:block;" />
+
+            
+            <svg viewBox="0 0 400 140" preserveAspectRatio="none" style="position:absolute;left:24px;right:24px;bottom:70px;width:calc(100% - 48px);height:110px;" aria-hidden="true">
+              <path class="dash-live-chart" d="M0,100 L40,80 L80,95 L120,55 L160,70 L200,30 L240,50 L280,20 L320,42 L360,15 L400,35" fill="none" stroke="#F000B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div style="position:absolute;top:20px;right:24px;display:flex;align-items:center;gap:8px;background:rgba(10,10,15,0.6);border:1px solid rgba(240,0,184,0.3);border-radius:8px;padding:6px 12px;">
+              <span class="dash-pulse-dot" style="width:8px;height:8px;border-radius:50%;background:#F000B8;display:inline-block;"></span>
+              <span style="font-size:0.7rem;color:rgba(241,245,249,0.75);letter-spacing:0.05em;">Ao vivo</span>
+            </div>
+            <div class="dash-toast" style="position:absolute;left:24px;bottom:20px;background:rgba(19,19,26,0.92);border:1px solid rgba(240,0,184,0.4);border-radius:10px;padding:10px 16px;display:flex;align-items:center;gap:10px;box-shadow:0 0 24px rgba(240,0,184,0.3);">
+              <span style="width:6px;height:6px;border-radius:50%;background:#F000B8;"></span>
+              <span style="font-size:0.75rem;color:#F1F5F9;">Estoque baixo: Produto #248</span>
+            </div>
+          </div>
+        </div>
+        
+        <div data-node-id="n104" style="position:absolute;bottom:-20px;right:24px;background:linear-gradient(135deg,#F000B8,#C026D3);border-radius:12px;padding:12px 20px;box-shadow:0 0 30px rgba(240,0,184,0.4);">
+          <div data-node-id="n105" style="font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:2px;">Status</div>
+          <div data-node-id="n106" style="font-weight:800;font-size:0.9rem;color:#fff;">Em Produção ✦</div>
+        </div>
+      </div>
+
+      
+      <div data-node-id="n107" style="padding-left:24px;">
+        
+        <div data-node-id="n108" style="display:flex;align-items:center;gap:14px;margin-bottom:32px;">
+          <div data-node-id="n109" style="width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#F000B8,#7C3AED);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;color:#fff;letter-spacing:-0.05em;">SS</div>
+          <div data-node-id="n110">
+            <div data-node-id="n111" style="font-size:1.5rem;font-weight:900;letter-spacing:-0.02em;color:#F1F5F9;">StockSys</div>
+            <div data-node-id="n112" style="font-size:0.75rem;color:rgba(241,245,249,0.4);letter-spacing:0.06em;text-transform:uppercase;">Sistema de Estoque</div>
+          </div>
+        </div>
+
+        <p data-node-id="n113" style="color:rgba(241,245,249,0.65);font-size:1rem;line-height:1.75;margin-bottom:32px;">
+          Um sistema completo para gerenciar entradas, saídas, fornecedores e relatórios — com interface intuitiva e relatórios em tempo real. Desenvolvido pela GSSTACK para transformar a gestão de estoque.
+        </p>
+
+        
+        <div data-node-id="n114" style="display:flex;flex-direction:column;gap:14px;margin-bottom:40px;">
+          <div data-node-id="n115" class="feature-item" style="display:flex;align-items:center;gap:12px;">
+            <div data-node-id="n116" class="feature-dot" style="width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#F000B8,#C026D3);flex-shrink:0;"></div>
+            <span data-node-id="n117" style="color:rgba(241,245,249,0.8);font-size:0.9rem;">Dashboard em tempo real com KPIs de estoque</span>
+          </div>
+          <div data-node-id="n118" class="feature-item" style="display:flex;align-items:center;gap:12px;">
+            <div data-node-id="n119" class="feature-dot" style="width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#F000B8,#C026D3);flex-shrink:0;"></div>
+            <span data-node-id="n120" style="color:rgba(241,245,249,0.8);font-size:0.9rem;">Controle de entradas, saídas e transferências</span>
+          </div>
+          <div data-node-id="n121" class="feature-item" style="display:flex;align-items:center;gap:12px;">
+            <div data-node-id="n122" class="feature-dot" style="width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#F000B8,#C026D3);flex-shrink:0;"></div>
+            <span data-node-id="n123" style="color:rgba(241,245,249,0.8);font-size:0.9rem;">Alertas automáticos de reposição de produtos</span>
+          </div>
+          <div data-node-id="n124" class="feature-item" style="display:flex;align-items:center;gap:12px;">
+            <div data-node-id="n125" class="feature-dot" style="width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#F000B8,#C026D3);flex-shrink:0;"></div>
+            <span data-node-id="n126" style="color:rgba(241,245,249,0.8);font-size:0.9rem;">Relatórios exportáveis e integração com NF-e</span>
+          </div>
+          <div data-node-id="n127" class="feature-item" style="display:flex;align-items:center;gap:12px;">
+            <div data-node-id="n128" class="feature-dot" style="width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#F000B8,#C026D3);flex-shrink:0;"></div>
+            <span data-node-id="n129" style="color:rgba(241,245,249,0.8);font-size:0.9rem;">Multiusuário com controle de permissões</span>
+          </div>
+        </div>
+
+        
+        <div data-node-id="n130" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;">
+          <span data-node-id="n131" style="background:rgba(192,38,211,0.12);border:1px solid rgba(192,38,211,0.25);border-radius:6px;padding:4px 12px;font-size:0.75rem;font-weight:600;color:rgba(192,38,211,0.9);letter-spacing:0.04em;">React</span>
+          <span data-node-id="n132" style="background:rgba(192,38,211,0.12);border:1px solid rgba(192,38,211,0.25);border-radius:6px;padding:4px 12px;font-size:0.75rem;font-weight:600;color:rgba(192,38,211,0.9);letter-spacing:0.04em;">Node.js</span>
+          <span data-node-id="n133" style="background:rgba(192,38,211,0.12);border:1px solid rgba(192,38,211,0.25);border-radius:6px;padding:4px 12px;font-size:0.75rem;font-weight:600;color:rgba(192,38,211,0.9);letter-spacing:0.04em;">PostgreSQL</span>
+          <span data-node-id="n134" style="background:rgba(192,38,211,0.12);border:1px solid rgba(192,38,211,0.25);border-radius:6px;padding:4px 12px;font-size:0.75rem;font-weight:600;color:rgba(192,38,211,0.9);letter-spacing:0.04em;">REST API</span>
+        </div>
+
+        <a data-node-id="n135" href="#contato" class="glow-btn" style="display:inline-block;padding:14px 36px;border-radius:var(--radius-md);font-weight:700;font-size:0.9375rem;text-decoration:none;color:#fff;">Quero um sistema assim</a>
+      </div>
+    </div>
+  </section>
+
+  <div data-node-id="n136" class="section-divider"></div>
+
+  
+  <section data-node-id="n137" id="processo" data-role="process" style="padding:100px 80px;background:var(--color-surface);position:relative;overflow:hidden;">
+    <div data-node-id="n138" style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(192,38,211,0.3),transparent);"></div>
+    <div data-node-id="n139" style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(192,38,211,0.3),transparent);"></div>
+
+    <div data-node-id="n140" style="text-align:center;margin-bottom:72px;">
+      <div data-node-id="n141" class="tag-pill" style="margin-bottom:20px;display:inline-flex;">
+        <span data-node-id="n142" style="width:6px;height:6px;border-radius:50%;background:#F000B8;display:inline-block;"></span>
+        Como trabalhamos
+      </div>
+      <h2 data-node-id="n143" style="font-size:clamp(32px,3.5vw,56px);font-weight:900;letter-spacing:-0.03em;line-height:1.05;margin-bottom:16px;">
+        <span data-node-id="n144" class="gradient-text">Processo Simples,</span><br />
+        <span data-node-id="n145" style="color:#F1F5F9;">Resultado Extraordinário</span>
+      </h2>
+    </div>
+
+    <div data-node-id="n146" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;">
+      
+      <div class="process-track">
+        <div class="process-track-fill" id="processTrackFill"></div>
+      </div>
+
+      
+      <div data-node-id="n148" class="process-step" style="text-align:center;padding:0 24px;position:relative;z-index:1;">
+        <div data-node-id="n149" class="circle" style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#F000B8,#C026D3);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-weight:900;font-size:1.5rem;color:#fff;box-shadow:0 0 30px rgba(240,0,184,0.35);">01</div>
+        <h4 data-node-id="n150" style="font-weight:800;font-size:1.1rem;color:#F1F5F9;margin-bottom:10px;">Briefing</h4>
+        <p data-node-id="n151" style="color:rgba(241,245,249,0.45);font-size:0.85rem;line-height:1.65;">Entendemos cada detalhe do seu projeto e objetivos de negócio.</p>
+      </div>
+      
+      <div data-node-id="n152" class="process-step" style="text-align:center;padding:0 24px;position:relative;z-index:1;">
+        <div data-node-id="n153" class="circle gradient-text" style="width:72px;height:72px;border-radius:50%;background:var(--color-surface2);border:2px solid rgba(192,38,211,0.4);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-weight:900;font-size:1.5rem;">02</div>
+        <h4 data-node-id="n154" style="font-weight:800;font-size:1.1rem;color:#F1F5F9;margin-bottom:10px;">Planejamento</h4>
+        <p data-node-id="n155" style="color:rgba(241,245,249,0.45);font-size:0.85rem;line-height:1.65;">Arquitetura, design e roadmap detalhado para sua solução.</p>
+      </div>
+      
+      <div data-node-id="n156" class="process-step" style="text-align:center;padding:0 24px;position:relative;z-index:1;">
+        <div data-node-id="n157" class="circle gradient-text" style="width:72px;height:72px;border-radius:50%;background:var(--color-surface2);border:2px solid rgba(192,38,211,0.4);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-weight:900;font-size:1.5rem;">03</div>
+        <h4 data-node-id="n158" style="font-weight:800;font-size:1.1rem;color:#F1F5F9;margin-bottom:10px;">Desenvolvimento</h4>
+        <p data-node-id="n159" style="color:rgba(241,245,249,0.45);font-size:0.85rem;line-height:1.65;">Construímos com tecnologia moderna, ágil e escalável.</p>
+      </div>
+      
+      <div data-node-id="n160" class="process-step" style="text-align:center;padding:0 24px;position:relative;z-index:1;">
+        <div data-node-id="n161" class="circle gradient-text" style="width:72px;height:72px;border-radius:50%;background:var(--color-surface2);border:2px solid rgba(192,38,211,0.4);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-weight:900;font-size:1.5rem;">04</div>
+        <h4 data-node-id="n162" style="font-weight:800;font-size:1.1rem;color:#F1F5F9;margin-bottom:10px;">Entrega &amp; Suporte</h4>
+        <p data-node-id="n163" style="color:rgba(241,245,249,0.45);font-size:0.85rem;line-height:1.65;">Lançamento com suporte contínuo para o sucesso do produto.</p>
+      </div>
+    </div>
+  </section>
+
+  <div data-node-id="n164" class="section-divider"></div>
+
+  
+  <section data-node-id="n165" id="sobre" data-role="about" style="padding:100px 80px;position:relative;overflow:hidden;">
+    <div data-node-id="n166" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+
+      
+      <div data-node-id="n167" style="position:relative;">
+        <div data-node-id="n168" style="border-radius:20px;overflow:hidden;border:1px solid rgba(192,38,211,0.25);box-shadow:0 0 48px rgba(192,38,211,0.15);">
+          <img data-node-id="n169" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='4'%20height='4'%3E%3Crect%20width='4'%20height='4'%20fill='%23EDE4CC'/%3E%3C/svg%3E" data-asset-id="team-workspace" alt="Equipe GSSTACK" style="width:100%;height:420px;object-fit:cover;display:block;filter:saturate(0.9);" />
+          <div data-node-id="n170" style="position:absolute;inset:0;background:linear-gradient(to bottom, transparent 50%, rgba(10,10,15,0.7) 100%);"></div>
+        </div>
+        
+        <div data-node-id="n171" style="position:absolute;left:-20px;top:40px;bottom:40px;width:3px;background:linear-gradient(to bottom,transparent,#C026D3,#F000B8,transparent);border-radius:2px;"></div>
+      </div>
+
+      
+      <div data-node-id="n172">
+        <div data-node-id="n173" class="tag-pill" style="margin-bottom:28px;display:inline-flex;">
+          <span data-node-id="n174" style="width:6px;height:6px;border-radius:50%;background:#F000B8;display:inline-block;"></span>
+          Sobre a GSSTACK
+        </div>
+        <h2 data-node-id="n175" style="font-size:clamp(32px,3.5vw,52px);font-weight:900;letter-spacing:-0.03em;line-height:1.05;margin-bottom:24px;">
+          <span data-node-id="n176" style="color:#F1F5F9;">Tecnologia que</span><br />
+          <span data-node-id="n177" class="gradient-text">Transforma Negócios</span>
+        </h2>
+        <p data-node-id="n178" style="color:rgba(241,245,249,0.6);font-size:1rem;line-height:1.8;margin-bottom:20px;">
+          Somos uma empresa apaixonada por resolver problemas reais com tecnologia. Nascemos para ser o parceiro tech que todo negócio precisa — ágeis, comprometidos e obcecados com qualidade.
+        </p>
+        <p data-node-id="n179" style="color:rgba(241,245,249,0.6);font-size:1rem;line-height:1.8;margin-bottom:40px;">
+          Da criação de sistemas complexos a sites de alta performance, cada projeto é tratado como único. Nosso código é limpo, nossas entregas são pontuais e nossa meta é sempre superar expectativas.
+        </p>
+        
+        <div data-node-id="n180" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+          <div data-node-id="n181">
+            <div data-node-id="n182" style="font-size:2.25rem;font-weight:900;line-height:1;" class="gradient-text">5+</div>
+            <div data-node-id="n183" style="font-size:0.75rem;color:rgba(241,245,249,0.4);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">Anos de mercado</div>
+          </div>
+          <div data-node-id="n184">
+            <div data-node-id="n185" style="font-size:2.25rem;font-weight:900;line-height:1;" class="gradient-text">30+</div>
+            <div data-node-id="n186" style="font-size:0.75rem;color:rgba(241,245,249,0.4);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">Clientes ativos</div>
+          </div>
+          <div data-node-id="n187">
+            <div data-node-id="n188" style="font-size:2.25rem;font-weight:900;line-height:1;" class="gradient-text">∞</div>
+            <div data-node-id="n189" style="font-size:0.75rem;color:rgba(241,245,249,0.4);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;">Possibilidades</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div data-node-id="n190" class="section-divider"></div>
+
+  
+  <section data-node-id="n191" id="contato" data-role="cta" style="padding:120px 80px;position:relative;overflow:hidden;text-align:center;">
+    
+    <div data-node-id="n192" style="position:absolute;inset:0;z-index:0;">
+      <img data-node-id="n193" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='4'%20height='4'%3E%3Crect%20width='4'%20height='4'%20fill='%23EDE4CC'/%3E%3C/svg%3E" data-asset-id="cta-bg" style="width:100%;height:100%;object-fit:cover;opacity:0.08;" alt="" />
+      <div data-node-id="n194" style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 50%, rgba(192,38,211,0.18) 0%, transparent 70%);"></div>
+    </div>
+    <div data-node-id="n195" style="position:relative;z-index:1;max-width:720px;margin:0 auto;">
+      <div data-node-id="n196" class="tag-pill" style="margin-bottom:28px;display:inline-flex;">
+        <span data-node-id="n197" style="width:6px;height:6px;border-radius:50%;background:#F000B8;display:inline-block;"></span>
+        Vamos Conversar
+      </div>
+      <h2 data-node-id="n198" style="font-size:clamp(40px,5vw,80px);font-weight:900;letter-spacing:-0.03em;line-height:0.95;margin-bottom:24px;">
+        <span data-node-id="n199" style="color:#F1F5F9;">Pronto para</span><br />
+        <span data-node-id="n200" class="gradient-text">dar o próximo</span><br />
+        <span data-node-id="n201" style="color:#F1F5F9;">passo?</span>
+      </h2>
+      <p data-node-id="n202" style="color:rgba(241,245,249,0.55);font-size:1.125rem;line-height:1.75;margin-bottom:48px;max-width:520px;margin-left:auto;margin-right:auto;">
+        Fale com a nossa equipe e descubra como podemos transformar a sua ideia em um produto digital de alto impacto.
+      </p>
+      <div data-node-id="n203" style="display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap;">
+        <a data-node-id="n204" href="mailto:contato@gsstack.com.br" class="glow-btn" style="padding:16px 44px;border-radius:var(--radius-md);font-weight:800;font-size:1.0625rem;text-decoration:none;color:#fff;letter-spacing:0.02em;">Iniciar Projeto</a>
+        <a data-node-id="n205" href="https://wa.me/55" class="glow-btn-outline" style="padding:16px 44px;border-radius:var(--radius-md);font-weight:600;font-size:1.0625rem;text-decoration:none;display:flex;align-items:center;gap:10px;">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div data-node-id="n206" class="section-divider"></div>
+
+  
+  <footer data-node-id="n207" data-role="footer" style="padding:48px 80px;background:var(--color-surface);">
+    <div data-node-id="n208" style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;">
+
+      
+      <div data-node-id="n209">
+        <div data-node-id="n210" style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <div data-node-id="n211" style="width:32px;height:32px;border-radius:7px;background:linear-gradient(135deg,#F000B8,#7C3AED);display:flex;align-items:center;justify-content:center;">
+            <span data-node-id="n212" style="font-weight:900;font-size:12px;color:#fff;">GS</span>
+          </div>
+          <span data-node-id="n213" style="font-size:1rem;font-weight:800;letter-spacing:-0.02em;color:#F1F5F9;">GSSTACK</span>
+        </div>
+        <p data-node-id="n214" style="color:rgba(241,245,249,0.35);font-size:0.8rem;line-height:1.7;max-width:220px;">
+          Criamos sistemas e sites que transformam negócios com tecnologia moderna e design de impacto.
+        </p>
+      </div>
+
+      
+      <div data-node-id="n215">
+        <div data-node-id="n216" style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(241,245,249,0.3);margin-bottom:16px;">Serviços</div>
+        <div data-node-id="n217" style="display:flex;flex-direction:column;gap:10px;">
+          <a data-node-id="n218" href="#" style="color:rgba(241,245,249,0.5);font-size:0.85rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#F000B8'" onmouseout="this.style.color='rgba(241,245,249,0.5)'">Sistemas Web</a>
+          <a data-node-id="n219" href="#" style="color:rgba(241,245,249,0.5);font-size:0.85rem;text-decoration:none;" onmouseover="this.style.color='#F000B8'" onmouseout="this.style.color='rgba(241,245,249,0.5)'">Criação de Sites</a>
+          <a data-node-id="n220" href="#" style="color:rgba(241,245,249,0.5);font-size:0.85rem;text-decoration:none;" onmouseover="this.style.color='#F000B8'" onmouseout="this.style.color='rgba(241,245,249,0.5)'">Consultoria Tech</a>
+          <a data-node-id="n221" href="#" style="color:rgba(241,245,249,0.5);font-size:0.85rem;text-decoration:none;" onmouseover="this.style.color='#F000B8'" onmouseout="this.style.color='rgba(241,245,249,0.5)'">APIs &amp; Integrações</a>
+        </div>
+      </div>
+
+      
+      <div data-node-id="n222">
+        <div data-node-id="n223" style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(241,245,249,0.3);margin-bottom:16px;">Empresa</div>
+        <div data-node-id="n224" style="display:flex;flex-direction:column;gap:10px;">
+          <a data-node-id="n225" href="#sobre" style="color:rgba(241,245,249,0.5);font-size:0.85rem;text-decoration:none;" onmouseover="this.style.color='#F000B8'" onmouseout="this.style.color='rgba(241,245,249,0.5)'">Sobre nós</a>
+          <a data-node-id="n226" href="#projetos" style="color:rgba(241,245,249,0.5);font-size:0.85rem;text-decoration:none;" onmouseover="this.style.color='#F000B8'" onmouseout="this.style.color='rgba(241,245,249,0.5)'">Projetos</a>
+          <a data-node-id="n227" href="#contato" style="color:rgba(241,245,249,0.5);font-size:0.85rem;text-decoration:none;" onmouseover="this.style.color='#F000B8'" onmouseout="this.style.color='rgba(241,245,249,0.5)'">Contato</a>
+        </div>
+      </div>
+
+      
+      <div data-node-id="n228">
+        <div data-node-id="n229" style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(241,245,249,0.3);margin-bottom:16px;">Contato</div>
+        <div data-node-id="n230" style="display:flex;flex-direction:column;gap:10px;">
+          <a data-node-id="n231" href="mailto:contato@gsstack.com.br" style="color:rgba(241,245,249,0.5);font-size:0.85rem;text-decoration:none;" onmouseover="this.style.color='#F000B8'" onmouseout="this.style.color='rgba(241,245,249,0.5)'">contato@gsstack.com.br</a>
+          <a data-node-id="n232" href="https://wa.me/55" style="color:rgba(241,245,249,0.5);font-size:0.85rem;text-decoration:none;" onmouseover="this.style.color='#F000B8'" onmouseout="this.style.color='rgba(241,245,249,0.5)'">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    
+    <div data-node-id="n233" style="padding-top:24px;border-top:1px solid rgba(192,38,211,0.12);display:flex;align-items:center;justify-content:space-between;">
+      <span data-node-id="n234" style="font-size:0.75rem;color:rgba(241,245,249,0.25);">© 2025 GSSTACK. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>

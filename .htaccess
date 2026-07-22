@@ -1,0 +1,14 @@
+Options -Indexes -MultiViews
+
+DirectoryIndex dist/index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteRule ^$ dist/index.html [L]
+  RewriteRule ^index\.html$ dist/index.html [L]
+</IfModule>
+
+<FilesMatch "^(\.env|\.git|\.gitignore|composer\.(json|lock)|package-lock\.json|pnpm-lock\.yaml|yarn\.lock)$">
+  Require all denied
+</FilesMatch>

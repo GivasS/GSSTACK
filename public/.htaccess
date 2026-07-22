@@ -1,0 +1,17 @@
+Options -Indexes -MultiViews
+
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^$ / [R=302,L]
+  RewriteRule ^index\.html$ / [R=302,L]
+</IfModule>
+
+<FilesMatch "^\.(?!well-known$)">
+  Require all denied
+</FilesMatch>
+
+<FilesMatch "\.(env|ini|log|sql|bak|old|tmp|map)$">
+  Require all denied
+</FilesMatch>
